@@ -1,6 +1,6 @@
 name: "Weather Station Listener"
 description: "Listens to a weather station that uploads its data via HTTP get"
-version: "1.0.0"
+version: "1.0.1"
 slug: "weather_station_listener"
 init: false
 arch:

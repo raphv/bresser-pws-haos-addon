@@ -1,4 +1,4 @@
-from bottle import request, response, route, run
+from bottle import request, response, route, run, _stderr
 import datetime, json, os
 
 current_data = {}
@@ -61,7 +61,7 @@ def receive_data():
 		"temperature_indoor_c": f_to_c(request.query.indoortempf),
 		"humidity_indoor": int(request.query.indoorhumidity),
 	})
-	print('%s\n'%(','.join(str(current_data[k]) for k in LOGGED_KEYS)))
+	_stderr('%s\n'%(','.join(str(current_data[k]) for k in LOGGED_KEYS)))
 	return 'OK'
 
 @route('/data')
