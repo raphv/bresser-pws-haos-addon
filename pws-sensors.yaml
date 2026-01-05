@@ -1,0 +1,48 @@
+  resource: "http://127.0.0.1:8000/data"
+  sensor:
+    - name: "PWS Outside Temperature"
+      device_class: temperature
+      unit_of_measurement: "°C"
+      value_template: "{{ value_json['temperature_c'] }}"
+    - name: "PWS pressure"
+      device_class: atmospheric_pressure
+      unit_of_measurement: "hPa"
+      value_template: "{{ value_json['pressure_hpa'] }}"
+    - name: "PWS Dew point"
+      device_class: temperature
+      unit_of_measurement: "°C"
+      value_template: "{{ value_json['dew_point_c'] }}"
+    - name: "PWS Outside Humidity"
+      device_class: humidity
+      unit_of_measurement: "%"
+      value_template: "{{ value_json['humidity'] }}"
+    - name: "PWS Wind Speed"
+      device_class: wind_speed
+      unit_of_measurement: "km/h"
+      value_template: "{{ value_json['wind_speed_kmh'] }}"
+    - name: "PWS Wind Gust"
+      device_class: wind_speed
+      unit_of_measurement: "km/h"
+      value_template: "{{ value_json['wind_gust_kmh'] }}"
+    - name: "PWS Wind Direction"
+      value_template: "{{ value_json['wind_direction_compass'] }}"
+    - name: "PWS Rainfall (past hour)"
+      device_class: precipitation_intensity
+      unit_of_measurement: "mm/h"
+      value_template: "{{ value_json['rain_mm'] }}"
+    - name: "PWS Rainfall (day)"
+      device_class: precipitation_intensity
+      unit_of_measurement: "mm/d"
+      value_template: "{{ value_json['daily_rain_mm'] }}"
+    - name: "PWS Solar radiation"
+      device_class: irradiance
+      unit_of_measurement: "W/m²"
+      value_template: "{{ value_json['solar_radiation'] }}"
+    - name: "PWS Inside temperature"
+      device_class: temperature
+      unit_of_measurement: "°C"
+      value_template: "{{ value_json['temperature_indoor_c'] }}"
+    - name: "PWS Inside Humidity"
+      device_class: humidity
+      unit_of_measurement: "%"
+      value_template: "{{ value_json['humidity_indoor'] }}"

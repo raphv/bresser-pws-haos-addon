@@ -1,0 +1,4 @@
+# https://developers.home-assistant.io/docs/add-ons/repository#repository-configuration
+name: Weather Station Listener
+url: 'https://github.com/raphv/bresser-pws-haos-addon'
+maintainer: RaphV
