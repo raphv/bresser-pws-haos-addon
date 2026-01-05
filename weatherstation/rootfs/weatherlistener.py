@@ -61,12 +61,7 @@ def receive_data():
 		"temperature_indoor_c": f_to_c(request.query.indoortempf),
 		"humidity_indoor": int(request.query.indoorhumidity),
 	})
-	logfile = 'logs/weather-%s.csv'%datetime.date.today().isoformat()
-	isnewfile = (not os.path.exists(logfile))
-	with open(logfile, 'a') as f:
-		if isnewfile:
-			f.write('%s\n'%(','.join(LOGGED_KEYS)))
-		f.write('%s\n'%(','.join(str(current_data[k]) for k in LOGGED_KEYS)))
+	print('%s\n'%(','.join(str(current_data[k]) for k in LOGGED_KEYS)))
 	return 'OK'
 
 @route('/data')
