@@ -1,5 +1,7 @@
 # Bresser WiFi Weather Station for Home Assistant OS
 
+## *Important: My weather station at home is no longer working, I can no longer test, fix or support anything in this repository*
+
 ## If you are using another Home Assistant installation method, check the sibling repository [bresser-home-assistant](https://github.com/raphv/bresser-home-assistant)
 
 A Home Assistant OS Addon to retrieve data from a Bresser Personal Weather Station.
